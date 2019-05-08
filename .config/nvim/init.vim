@@ -6,6 +6,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'nanotech/jellybeans.vim'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
@@ -81,6 +82,8 @@ nnoremap ^ <nop>
 inoremap jk <esc>
 inoremap kj <esc>
 
+" Goyo toggled by leader g
+nnoremap <leader>g :Goyo<cr>
 set ruler
 
 set undolevels=1000
