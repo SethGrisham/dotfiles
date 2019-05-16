@@ -2,7 +2,7 @@
 
 CHOICES="Nothing\nShutdown\nReboot\nHibernate"
 
-CHOICE=$(echo  $CHOICES | dmenu -i -p "Power Options")
+CHOICE=$(echo -e $CHOICES | dmenu -i -p "Power Options")
 
 case $CHOICE in	
 	Nothing)
@@ -10,15 +10,15 @@ case $CHOICE in
 		;;
 
 	Shutdown)
-		$(sudo -A poweroff)
+		$(shutdown now)
 		;;
 
 	Reboot)
-		$(sudo -A reboot)
+		$(reboot now)
 		;;
 
 	Hibernate)
-		$(sudo -A ZZZ)
+		$(hibernate now)
 		;;
 
 	*)
