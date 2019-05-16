@@ -15,13 +15,14 @@ call plug#end()
 colorscheme jellybeans
 let g:airline_theme='jellybeans'
 syntax enable
+au BufNewFile,BufRead *.groff set filetype=groff
 
 "--UI--
 
 set number relativenumber     " Relative numbers on the side
 set cursorline                " Underlines line cursor is on
 set linebreak                 " Breaks lines at word (instead of the character)
-set showbreak=+++             " Begin wrapped line with +++
+set showbreak=-/-             " Begin wrapped line with +++
 set showmatch                 " Highlights matching paranthasis and brackets
 set visualbell                " Doesn't beep when error happens
 set wildmenu                  " Menu when tab completing commands
@@ -58,8 +59,8 @@ nnoremap <leader>; za
 "--Movement--
 
 " Move vertically by visual line
-" nnoremap j gj
-" nnoremap k gk
+nnoremap j gj
+nnoremap k gk
 
 " Disables arrow keys
 nnoremap <Up> <nop>
