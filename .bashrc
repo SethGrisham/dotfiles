@@ -4,6 +4,7 @@
 [[ $- != *i* ]] && return
 
 export PATH=$PATH:~/.scripts
+export ASKPASS=dmenu_askpass
 alias ls='ls --color=auto'
 alias v=nvim
 PS1='[\u@\h \W]\$ '
