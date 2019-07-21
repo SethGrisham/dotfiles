@@ -3,6 +3,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+export XDG_CONFIG_HOME="$HOME/.config"
 export PATH=$PATH:~/.scripts
 export ASKPASS=dmenu_askpass
 alias ls='ls --color=auto'

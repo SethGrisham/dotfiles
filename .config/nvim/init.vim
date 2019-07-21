@@ -3,17 +3,17 @@ let mapleader=";"             " Leader key is SEMICOLON
 " --PLUGINS--
 call plug#begin('~/.local/share/nvim/site/plugged')
 
-Plug 'vim-airline/vim-airline'
-Plug 'nanotech/jellybeans.vim'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'morhetz/gruvbox'
+Plug 'itchyny/lightline.vim'
 Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
 "--Colors--
 
-colorscheme jellybeans
-let g:airline_theme='jellybeans'
+let g:lightline = {'colorscheme': 'gruvbox',}
+let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox
 syntax enable
 au BufNewFile,BufRead *.groff set filetype=groff
 
@@ -55,6 +55,15 @@ set foldmethod=indent         " Fold based off of indentions
 
 " Use space to toggle folds
 nnoremap <leader>; za
+
+"--Splitting--
+set splitright
+set splitbelow
+
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
 
 "--Movement--
 
